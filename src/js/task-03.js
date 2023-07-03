@@ -15,17 +15,9 @@ const images = [
 
 const galleryRef = document.querySelector(".gallery");
 
-console.log(galleryRef);
+const markup = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" class="img"></li>`)
+  .join("");
 
-const elements = images.map((image) => {
-  // const imageRef = document.createElement("li");
-  const imageEl = document.createElement("img");
-  imageEl.textContent = image.alt;
-  imageEl.src = image.url;
-  // return imageRef;
-  return imageEl;
-});
-galleryRef.append(...elements);
-console.log(elements);
-
-// galleryRef.insertAdjacentHTML("beforeend", markup);
+galleryRef.insertAdjacentHTML("beforeend", markup);
+console.dir(galleryRef);
