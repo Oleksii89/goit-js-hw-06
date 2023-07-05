@@ -24,15 +24,16 @@ button {
 }
 
 img {
-  max-width: 300px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 ul {
   list-style: none;
 }
+
 .gallery {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
