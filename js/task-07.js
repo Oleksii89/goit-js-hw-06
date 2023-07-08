@@ -11,6 +11,7 @@ const textRef = document.querySelector("#text");
 
 inputScrollRef.addEventListener("input", onInput);
 
-function onInput(evt) {
-  textRef.style.fontSize = evt.currentTarget.value.concat("px");
+function onInput() {
+  textRef.style.fontSize = `${inputScrollRef.value}px`;
 }
+onInput();
